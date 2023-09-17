@@ -59,7 +59,9 @@ Edit `password` variable with your password and change the database name (in mul
 
 6. There are limits to the way you can give 'gender in reviews section', 'genre in author subscription section' - make it more sophisticated
 
-7. You can add real PDFs, actual transaction elements etc., 
+7. You can add real PDFs, actual transaction elements etc.,
+
+8. Delete unnecessary things from the database
 
 ... and many more
 
