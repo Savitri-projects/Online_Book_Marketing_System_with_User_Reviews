@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Testimonials</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="css/feedback_page_styles.css">
+    <link rel="stylesheet" href="css/books_page_styles.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+<section>
+    <div class="container">
+        <div class="section-title">
+            <h2>Reviews</h2>
+            <span class="section-separator"></span>
+            <p>This page contains the review of the readers who have read the books in our store.</p>
+        </div>
+    </div>
+    <div class="testimonials-carousel-wrap">
+        <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right" style="color: #fff"></i></div>
+        <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left" style="color: #fff"></i></div>
+        <div class="testimonials-carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <% for(let i=0;i<review_data.length;i++){ %>
+                    <div class="swiper-slide">
+                        <div class="testi-item">
+                            <div class="testi-avatar"><img src="<%= review_data[i].image_info %>"></div>
+                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                            <div class="testimonials-text">
+                                
+                                <% if(review_data[i].rating == 5){ %>
+                                <div class="listing-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <% } %>
+                                <% if(review_data[i].rating == 3){ %>
+                                    <div class="listing-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <% } %>
+                                    <% if(review_data[i].rating == 1){ %>
+                                        <div class="listing-rating">
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <% } %>
+                                <p><%= review_data[i].comment %></p>
+                                <a href="#" class="text-link"></a>
+                                <div class="testimonials-avatar">
+                                    <h3><%= review_data[i].name %></h3>
+                                    <h4><%= review_data[i].role %></h4>
+                                </div>
+                            </div>
+                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
+                        </div>
+                    </div>
+                    <% } %>
+                    <!--second--->
+                   
+                    <!--testi end-->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="tc-pagination"></div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="section-title">
+        <h2> Finished a book? You too can write a review on it!</h2>
+        <span class="section-separator"></span>
+        <p>Enter the fields below and submit your review</p>
+    </div>
+</div>
+
+<section class="order" id="order">
+    <form action="/review_result" method = "post">
+        <div class="inputBox">
+            <div class="input">
+                <span>Your Name</span>
+                <input type="text" name = "name" placeholder="enter your name">
+            </div>
+            <div class="input">
+                <span>Your Rating</span>
+                <input type="number" name = "rating" placeholder="enter your rating">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Role</span>
+                <input type="text" name = "role" placeholder="enter your role">
+            </div>
+            <div class="input">
+                <span>Gender</span>
+                <input type="text" name = "gender" placeholder="Enter your gender">
+            </div>
+        
+            <div class="input">
+                <span>Your Comment</span>
+                <textarea name="comment" placeholder="enter Your comment" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <!-- <div class="file-upload-input">
+                <span><h4> Your Image</h4></span>
+                <input type="file" onchange="readURL(this)" accept="Image/*">
+            </div> -->
+            
+        <button  name = book_id class = "btn" value = "<%= review_data[0].book_id %>">Submit</button>
+
+    </form>
+
+</section>
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

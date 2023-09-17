@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book store with user reviews</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/books_page_styles.css">
+    
+    
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="header-1">
+        <a href="/book-detail"></a>
+        <a href="http://localhost:4003" class="logo"> <i class="fas fa-book"></i> The Last Chapter </a>
+        <div class="icons"> </div>
+        </div>
+
+    </div>
+   
+
+</header>
+
+<!-- ---------- single book details------------- -->
+
+<div class="small-container single-product">
+  <div class="row">
+    <div class="col-2">
+      <img src="<%= book_data2[0].image_name %>" alt="Book4" width="68%" />
+    </div>
+    <div class="col-2">
+      <h1><%= book_data2[0].book_title %></h1>
+      <!--Change here-->
+      <!-- <h2><%= book_data2[0].authors %></h2> -->
+     
+      <h4>Rs. <%= book_data2[0].book_cost %></h4>
+      <div class = "form-inline">
+        <div class = "row">
+      <form action="/buy_page" method="POST"><button  name = book_id2 class = "btn" value = "<%= book_data2[0].book_id %>">Buy</button></form>  
+      <form action="/review" method="POST"><button  name = book_id3 class = "btn" value = "<%= book_data2[0].book_id %>">Review</button></form> 
+      <form action="/author_info" method="POST"><button  name = book_id4 class = "btn" value = "<%= book_data2[0].book_id %>">Author info</button></form> 
+    </div></div>
+      <h3>Book Details </h3>
+      <p> <i> <h5>
+        <%= book_data2[0].book_description %>
+      </h5>
+    </i>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

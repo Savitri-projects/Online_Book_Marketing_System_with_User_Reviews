@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transaction Details</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+	<link href="css/buy_page_styles.css" rel="stylesheet">
+  <link href="css/books_page_styles.css" rel = "stylesheet">
+</head>
+<body>
+    <a href="book-detail.html" class="float">
+        <i class="	fa fa-chevron-left my-float"></i>
+        </a>
+	<div class="contact-form">
+		<!-- <img alt="" class="avatar" src="https://i.postimg.cc/zDyt7KCv/a1.jpg"> -->
+		<h2>Transaction Details</h2>
+        <h2><i>The book you are purchasing is:</i></h2>
+        <p>Name of the book: <%= result1[0].book_title %>,<br>
+    Author name:<% for(let i=0;i<result1.length;i++){ %><%= result1[i].author_name %>,<% } %><br>
+    Book cost: <%= result1[0].book_cost %>,<br>
+    Book ID: <%= result1[0].book_id %></p><br>
+    <div class="text-center">
+      
+        <!-- Get a Placeholder image initially,
+         this will change according to the
+         data entered later -->
+        <img src=
+  "https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+          class="qr-code img-thumbnail img-responsive" />
+      </div>
+    
+      <script src=
+        "https://code.jquery.com/jquery-3.5.1.js">
+      </script>
+      
+    <p>Scan the qr code above to generate the transaction ID </p><br>
+
+    <!-- <h3>Enter your transaction details:</h3> -->
+    <!-- <form action="/status" action = "/failure" method="POST">
+         <input type="transaction_ID" name="transaction_ID" class="input-field" placeholder="Transaction ID" /><br> 
+        <p>Enter your transaction ID</p><input placeholder="Enter Transaction ID" type="password">
+        <input type="submit" class="btn" value="VERIFY"><br>
+    </form> -->
+		<!--<form action="/thanks_page">-->
+			<p>Email</p>
+      <form action="/result" method="POST">
+          <input placeholder="Enter Email" type="email" name = "email" class = "input-field">
+            <p>Enter your transaction ID</p><input placeholder="Enter Transaction ID" type="text" name = "transaction_id" class = "input-field">
+            <p>Enter coupon code</p><input placeholder="Enter coupon code" type="text" name = "coupon_code" class = "input-field">
+             <button  name = book_id8 class = "btn" value = "<%= result1[0].book_id %>">Submit</button>
+            </form> 
+           <!-- <input type="submit" a href="thanks_page.html" class="btn" value="Submit"><br>-->
+			<!-- <p>Passwrod</p><input placeholder="Enter Password" type="password"> <input type="submit" value="Sign in">
+			<p><input type="checkbox">Remember Me</p> -->
+		<!--</form> -->
+	</div>
+    
+      <script>
+        // Function to HTML encode the text
+        // This creates a new hidden element,
+        // inserts the given text into it 
+        // and outputs it out as HTML
+        function htmlEncode(value) {
+          return $('<div/>').text(value)
+            .html();
+        }
+      
+        $(function () {
+      
+          // Specify an onclick function
+          // for the generate button
+          $('#generate').click(function () {
+      
+            // Generate the link that would be
+            // used to generate the QR Code
+            // with the given data 
+            let finalURL =
+    'https://chart.googleapis.com/chart?cht=qr&chl=' +
+              htmlEncode($('#content').val()) +
+              '&chs=160x160&chld=L|0'
+      
+            // Replace the src of the image with
+            // the QR code image
+            $('.qr-code').attr('src', finalURL);
+          });
+        });
+      </script>
+      
+</body>
+</html>

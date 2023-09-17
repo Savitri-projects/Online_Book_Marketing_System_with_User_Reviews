@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book store with user reviews</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/books_page_styles.css" >
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+    <div class="header-1">
+        <a href="#" class="logo"> <i class="fas fa-book"></i> The Last Chapter </a>
+
+        <!-- <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> -->
+        
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search" onclick="location.href='cartde.html'" ></div>
+            <a href="../cartde.html" ></a>
+            <!-- <div id="login-btn" class="fas fa-sign-out-alt" onclick="mainApp.logout()"> -->
+                <div id="login-btn" class="fas fa-sign-out-alt">
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="header-2">
+        <nav class="navbar">
+            <a href="#educational">Educational</a>
+            <a href="#poetry">Poetry</a>
+            <a href="#fictional">Fictional</a>
+            <a href="#auto-biography">Auto biography</a>
+            <a href="#self-help">Self-help books</a>
+        </nav>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- bottom navbar  -->
+
+<!-- login form  -->
+
+<div class="login-form-container">
+
+    <div id="close-login-btn" class="fas fa-times"></div>
+</div>
+
+<!-- home section starts  -->
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>New Arrivals!</h3>
+            <p></p>
+           <!-- <form action="/explore" method="POST"><button class = "btn" >More info</button>
+            </form> -->
+           <form action="/explore" method="POST"><button class = "btn">Explore</button></form> 
+           <!-- <a href="ebook.html" class="btn">Explore</a> -->
+        </div>
+
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide"><img src="image/Chemistry.jfif" alt=""></a>
+                <a class="swiper-slide"><img src="image/poetry3.jfif" alt=""></a>
+                <a  class="swiper-slide"><img src="image/fiction.jfif" alt=""></a>
+                <a class="swiper-slide"><img src="image/auto3.jfif" alt=""></a>
+                <a class="swiper-slide"><img src="image/help4.jfif" alt=""></a>
+            </div>
+            <img src="image/stand.png" class="stand" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ense  -->
+
+<!-- icons section starts  -->
+
+
+
+<!-- icons section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="educational">
+
+    <h1 class="heading"> <span>Educational</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            
+                <% for(let i=0; i<book_data.length; i++){ %>
+                    <% if(book_data[i].genre == "educational"){ %>
+                    <div class="swiper-slide box">
+                <div class="image">
+                    <img src=<%= book_data[i].image_name %> alt="">
+                </div>
+                <div class="content" id = "btitle">
+                    <h3> <%= book_data[i].book_title %> </h3>
+                    <div class="price"> Rs. <%= book_data[i].book_cost %> </div>
+             <!--       <div><%= book_data[i].book_id %> </div>-->
+                <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= book_data[i].book_id %>">More info</button>
+                    </form>
+                  <!--  <input type = "submit" id =  <%= book_data[i].book_id %> class = "btn" value = "More info">-->
+                 <!--   <a href = "books_page.ejs" class="btn" name = <%= book_data[i].book_id %> >More info</a> -->
+                  <!-- <input type = "button" name = <%= book_data[i].bookid %> class="btn"> More info</a>--> 
+                  
+                </div>
+            </div>
+        <!--<div class="swiper-button-next"></div>-->
+        <div class="swiper-button-prev"></div>
+        <% } %>
+            <% } %>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<section class="featured" id="poetry">
+
+    <h1 class="heading"> <span>Poetry</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            <% for(let i=0; i<book_data.length; i++){ %>
+                <% if(book_data[i].genre == "poetry"){ %>
+                    <div class="swiper-slide box">
+                <div class="image">
+                    <img src=<%= book_data[i].image_name %> alt="">
+                </div>
+                <div class="content">
+                    <h3> <%= book_data[i].book_title %> </h3>
+                    <div class="price"> Rs. <%= book_data[i].book_cost %> </div>
+                    <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= book_data[i].book_id %>">More info</button></form>
+                </div>
+            </div>
+        <div class="swiper-button-prev"></div>
+            <% } %>
+            <% } %>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<section class="newsletter">
+
+    
+        
+        <!-- <input type="email" name="" placeholder="enter your email" id="" class="box"> -->
+        <form action="/feedback" method="POST"><h3>Wanna know what people think about us? Go check it!</h3><button class = "btn">Feedback</button></form>
+       
+      <!--  <input type="button" value="Feedback" class="btn solid" onclick="location.href='Review.html'">-->
+   
+
+</section>
+
+<section class="featured" id="fictional">
+
+    <h1 class="heading"> <span>Fictional</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            
+            <% for(let i=0; i<book_data.length; i++){ %>
+                <% if(book_data[i].genre == "fictional"){ %>
+                    <div class="swiper-slide box">
+                <div class="image">
+                    <img src=<%= book_data[i].image_name %> alt="">
+                </div>
+                <div class="content">
+                    <h3> <%= book_data[i].book_title %> </h3>
+                    <div class="price"> Rs. <%= book_data[i].book_cost %> </div>
+                    <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= book_data[i].book_id %>">More info</button></form>
+                </div>
+            </div>
+        <div class="swiper-button-prev"></div>
+            <% } %>
+            <% } %>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+
+
+<section class="featured" id="auto-biography">
+
+    <h1 class="heading"> <span>Auto-biographies</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            
+            <% for(let i=0; i<book_data.length; i++){ %>
+                <% if(book_data[i].genre == "auto-biography"){ %>
+                    <div class="swiper-slide box">
+                <div class="image">
+                    <img src=<%= book_data[i].image_name %> alt="">
+                </div>
+                <div class="content">
+                    <h3> <%= book_data[i].book_title %> </h3>
+                    <div class="price"> Rs. <%= book_data[i].book_cost %> </div>
+                    <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= book_data[i].book_id %>">More info</button></form>
+                </div>
+            </div>
+        <div class="swiper-button-prev"></div>
+            <% } %>
+            <% } %>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+
+
+<section class="featured" id="self-help">
+
+    <h1 class="heading"> <span>Self-help books</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            
+            <% for(let i=0; i<book_data.length; i++){ %>
+                <% if(book_data[i].genre == "self-help"){ %>
+                    <div class="swiper-slide box">
+                <div class="image">
+                    <img src=<%= book_data[i].image_name %> alt="">
+                </div>
+                <div class="content">
+                    <h3> <%= book_data[i].book_title %> </h3>
+                    <div class="price"> Rs. <%= book_data[i].book_cost %> </div>
+                    <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= book_data[i].book_id %>">More info</button></form>
+                </div>
+            </div>
+        <div class="swiper-button-prev"></div>
+            <% } %>
+            <% } %>
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+<!-- newsletter section ends -->
+
+<!-- arrivals section starts  -->
+
+
+<!-- arrivals section ends -->
+
+<!-- deal section starts  -->
+
+<!--
+<div class="loader-container">
+    <img src="image/loader.gif" alt="">
+</div>
+
+
+-->
+
+
+
+
+<script src="js/fireBase.js"></script>
+<script src="js/authentication.js"></script>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/book_page_java_script.js"></script>
+
+</body>
+</html>

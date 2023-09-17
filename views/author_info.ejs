@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Author</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/authorpage.css">
+</head>	
+<body>
+	<% for(let i=0;i<auth_info.length;i++){ %>
+	<div class="section">
+
+       
+        
+		<div class="container">
+			<div class="content-section">
+				<div class="title">
+					<h1>About Author</h1>
+				</div>
+				<div class="content">
+					<h2><%= auth_info[i].author_name %></h2>
+                    
+                    
+					<p><i><%= auth_info[i].author_info %>
+                        </i></p>  
+				</div>
+			</div>
+            
+			<div class="image-section">
+				<img src="<%= auth_info[i].author_image %>">
+			</div>
+            
+		</div>
+	</div>
+	<% } %>
+
+
+</body>
+</html>

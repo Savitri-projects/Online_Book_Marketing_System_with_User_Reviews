@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore!</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<!-- header section starts      -->
+
+<header>
+
+    <a href="http://localhost:4003" class="logo"><i class="fas fa-book"></i>The Last Chapter</a>
+
+    <nav class="navbar">
+        <a class="active" href="#home">Banner</a>
+        <a href="#popular_books">Popular books</a>
+        <a href="#about">about</a>
+        <a href="#menu">new arrivals</a>
+        <a href="#review">character review</a>
+        <a href="#order">subscribe</a>
+        <a href="#coupon">coupon</a>
+        <a href="#educational">edu ssn</a>
+    </nav>
+
+    <div class="icons">
+        <i  id="menu-bars"></i>
+        <i  id="search-icon"></i>
+        <a href="#" "></a>
+        <a href="#"></a>
+    </div>
+
+</header>
+
+<!-- header section ends-->
+
+<!-- search form  -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper wrapper">
+
+            
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Star Author</span>
+                    <h3>Gillian Flynn</h3>
+                    <p>One of the star authors is Gillian Flynn</p>
+                    <a href="https://www.instagram.com/thegillianflynn/?hl=en" class="btn">Check Author </a>
+                </div>
+                <div class="image">
+                    <img src="image/gil.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Popular Category</span>
+                    <h3>Fiction</h3>
+                    <p>The most popular genre pursued is Fiction</p>
+                    <a href="http://localhost:4003#fictional" class="btn">Check fiction section </a>
+                </div>
+                <div class="image">
+                    <img src="image/fiction (2).jfif" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Holiday season</span>
+                    <h3>25% off</h3>
+                    <p>This holiday season on all fiction books</p>
+                    <p>Use coupon code: GHIJKL</p>
+                    <a href="http://localhost:4003#fictional" class="btn">Check fiction section </a>
+                </div>
+                <div class="image">
+                    <img src="image/holiday.gif" alt="">
+                </div>
+            </div>
+            <!--
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Therapy can also be in the form of reading</span>
+                    <h3>Self Help</h3>
+                    <p>Meet authors of the self help genre for better understanding of yourself</p>
+                    <a href="http://127.0.0.1:5000/" class="btn"> Meet them </a>
+                </div>
+                <div class="image">
+                    <img src="image/selfcare.jpg" alt="">
+                </div>
+            </div>-->
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Write now</span>
+                    <h3>Wanna be the next best Author?</h3>
+                    <p>Are you an aspiring writer? We'll help you publish your beautiful works</p>
+                    <a href="#order" class="btn"> Subscribe now </a>
+                </div>
+                <div class="image">
+                    <img src="image/letter2.gif" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Writer's space</span>
+                    <h3>Author Interaction</h3>
+                    <p> Interact with our authors through their websites and social media </p>
+                    <form action="/author_dm" method="POST"><button class="btn" >Meet them</button>
+                    </form>
+                    <!--<a href="F:\V SEM\3_Database_Design\Implementation\Attempt_20\public\author_dm.html" class="btn"> Meet them </a>-->
+                </div>
+                <div class="image">
+                    <img src="image/Blogging.svg" alt="">
+                </div>
+            </div>
+            <!-- <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Chat now</span>
+                    <h3>Get personalised help!</h3>
+                    <p>Get help through our chatbot which guides you through our website</p>
+                    <a href="http://127.0.0.1:5000/" class="btn"> Chat</a>
+                </div>
+                <div class="image">
+                    <img src="image/Chat bot.gif" alt="">
+                </div>
+            </div> -->
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>See now</span>
+                    <h3>400 Days- the book trailer</h3>
+                    <p>Check out Chetan Bhagat's 400 days book trailer now!</p>
+                    <a href="https://www.youtube.com/watch?v=ejfLsngS1QM" class="btn"> See video</a>
+                </div>
+                <div class="image">
+                    <img src="image/trailer.jfif" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Coming soon</span>
+                    <h3>Stay Tuned</h3>
+                    <p>books of your favorite authors releasing next month</p>
+                    <a href="#menu" class="btn"> Check out </a>
+                </div>
+                <div class="image">
+                    <img src="image/song2.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Coupon code</span>
+                    <h3>C50PTS90</h3>
+                    <p>USE COUPON CODE for getting 10% off on these books </p>
+                    <p>Offers ends by 28th March, 2022 11:59 PM IST</p>
+                    <a href="#coupon" class="btn"> Use</a>
+                </div>
+                <div class="image">
+                    <img src="image/coupon.gif" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Character Review</span>
+                    <h3>Choose your character</h3>
+                    <p>Confused between choosing books? These characters will help you decide which book you want to take home</p>
+                    <a href="#review" class="btn"> See for yourself </a>
+                </div>
+                <div class="image">
+                    <img src="image/amnick.jfif" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Exam season discounts</span>
+                    <h3> Get 15% off on each book from 24th April 2024</h3>
+                    <p> In the educational series this exam season</p>
+                    <a href="#educational" class="btn"> See for yourself </a>
+                </div>
+                <div class="image">
+                    <img src="image/buyone.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Adrenaline</span>
+                    <h3>Gone Girl returns</h3>
+                    <p>This book's gonna bring all the goosebumps back!</p>
+                    <a href="#review" class="btn"> See for yourself</a>
+                </div>
+                <div class="image">
+                    <img src="image/crime.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- dishes section starts  -->
+
+<section class="popular_books" id="popular_books">
+
+    <h3 class="sub-heading"> Customer's Choice </h3>
+    <h1 class="heading"> Popular Books </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            
+            <img src=<%= book_data[5].image_name %> alt="">
+            <h3>The lakes  </h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span><%= book_data[5].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1006 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <img src=<%= book_data[2].image_name %> alt="">
+            <h3>Basic Mathematics</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span>Rs. <%= book_data[2].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1003 %>">More info</button>
+            </form>
+         <!--   <a href="#" class="btn">More info</a> -->
+        </div>
+
+        <div class="box">
+            <img src=<%= book_data[9].image_name %> alt="">
+            <h3>The Lighthouse</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div> -->
+            <span>Rs. <%= book_data[9].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1010 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+
+            <img src="<%= book_data[22].image_name %>" alt="">
+            <h3>Speak your truth</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span>Rs. <%= book_data[22].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1023 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <img src="<%= book_data[19].image_name %>" alt="">
+            <h3>My Life In Full</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span>Rs. <%= book_data[16].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1020 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <img src="<%= book_data[10].image_name %>" alt="">
+            <h3>Call Me By Your Name</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div> -->
+            <span>Rs. <%= book_data[10].book_cost %></span> 
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1011 %>">More info</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="coupon" id="coupon">
+
+    <h3 class="sub-heading"> Coupon Codes applicable </h3>
+    <h1 class="heading"> On these Books </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src=<%= book_data[6].image_name %> alt="">
+            <h3>The bell jar</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span>Rs. <%= book_data[6].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1007 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <img src=<%= book_data[2].image_name %> alt="">
+            <h3>Basic Mathematics</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span>Rs. <%= book_data[2].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1003 %>">More info</button>
+            </form>
+        </div>
+        <div class="box">
+            <img src=<%= book_data[23].image_name %> alt="">
+            <h3>Girl Stop Apologizing</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div> -->
+            <span>Rs. <%= book_data[23].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1024 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <img src=<%= book_data[20].image_name %> alt="">
+            <h3>The healing self</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span>Rs. <%= book_data[20].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1021 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <img src=<%= book_data[8].image_name %> alt="">
+            <h3>Mrs Dalloway</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div> -->
+            <span>Rs. <%= book_data[8].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1009 %>">More info</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <img src="<%= book_data[10].image_name %>" alt="">
+            <h3>Call Me By Your Name</h3>
+            <!-- <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div> -->
+            <span>Rs. <%= book_data[10].book_cost %></span>
+            <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= 1011 %>">More info</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="educational" id="educational">
+
+    <h3 class="sub-heading"> Get 15% off this exam season from 24th April 2022 </h3>
+    <h1 class="heading"> On Educational Books </h1>
+
+    <div class="box-container">
+
+        <% for(let i=0; i<5; i++){ %>
+            <div class="box">
+               <!-- <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a> -->
+                <img src=<%= book_data[i].image_name %> alt="">
+                <h3><%= book_data[i].book_title %></h3>
+                <!-- <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div> -->
+                <!-- <span><%= book_data[i].book_title %></span> -->
+                <span>Rs. <%= book_data[i].book_cost %></span>
+                <form action="/book-detail" method="POST"><button  name = book_id class = "btn" value = "<%= book_data[i].book_id %>">More info</button>
+                </form>
+            </div>
+        <% } %>
+
+        
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <h3 class="sub-heading"> About Us </h3>
+    <h1 class="heading"> why choose us? </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/Book lover-bro.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Amazing Collection of Books</h3>
+            <p>We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers, where we discover new writers, where children get hooked on the thrill of reading that can last a lifetime. They’re also anchors for our downtowns and communities.
+            </p>
+            <p>As more and more people buy their books online, we wanted to create an easy, convenient way for you to get your books and support bookstores at the same time.</p>
+            <div class="icons-container">
+                
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>easy payments</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+            <a href="http://localhost:4003/" class="btn">learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading"> Newly released books of your favorite authors </h3>
+    <h1 class="heading"> Coming Soon </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="image/lala.jfif" alt="">
+            </div>
+            <div class="content">
+                <h3>La La Land</h3>
+                <span class="price">Virginia Woolf</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="image/achilles.jfif" alt="">
+            </div>
+            <div class="content">
+                
+                <h3>The Song of Achilles</h3>
+                <span class="price">Madeline Miller</span>
+            </div>
+        </div>        
+
+        <div class="box">
+            <div class="image">
+                <img src="image/zayn.jfif" alt="">
+            
+            </div>
+            <div class="content">
+                <h3>Z- the autobiography</h3>
+                <span class="price">Zayn</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="image/violet.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Violet Bent Backwards</h3>
+                <span class="price">Lana Del Rey</span>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="image">
+                <img src="image/mov.jfif" alt="">
+            </div>
+            <div class="content">
+                <h3>The Merchant of Venice</h3>
+                <span class="price">William Shakespeare</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/cryptography_tb.jpg" alt="">
+            
+            </div>
+            <div class="content">
+                <h3>Crytographic textbook</h3>
+                <span class="price">Hans Delfs</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h3 class="sub-heading"> Interested in these books? Check what their characters have to tell you </h3>
+    <h1 class="heading"> Buy what I say </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="image/ach.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Achilles</h3>
+                        <h3>The Song of Achilles</h3>
+                    </div>
+                </div>
+                <p>Hi! I am Achilles.. Um I am the main character in the book 'the song of achilles'. I am a warrior and play a major role in the trojan war. I also like my best friend Patroclus.. So if you wanna know
+                    what happens between us continue reading my book. 
+                  
+                </p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="image/elio.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Elio Perlman</h3>
+                        <h3>Call my by your name</h3>
+                    </div>
+                </div>
+                <p>Hey I am Elio Perlman! Nice to meet ya. You gotta read my book if you wanna experience the lush fields in Italy,
+                    the delightful gelatos in the steaming hot summer and a heartbreaking story. So waste no time and pick 'Call my by your name'.
+                </p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkmeoB4tvjP4RpSMuXotILDVNRHdil-E5BWI0hWfx0ar9QiyHp9p_utV6o4IxifAfzeUw&usqp=CAU alt="">
+                    <div class="user-info">
+                        <h3>Amy Dunne</h3>
+                        <h3>Gone Girl</h3>
+                    </div>
+                </div>
+                <p>Hello, I am Amy Dunne, the amazing Amy, who loves my husband Nick. But he acts distant towards me now. I wonder why.
+                    you wanna explore with me on how I discover and my hurdles in uncovering the real him.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="image/portia.jfif" alt="">
+                    <div class="user-info">
+                        <h3>Portia</h3>
+                        <h3>Merchant of Venice</h3>
+                    </div>
+                </div>
+                <p>Hola I am Portia, the rich heiress in Vermont. I am both beauty and brains. My intelligence was witnessed when I witfully
+                    saved a friend of my husband's life from a tricky case. Join me with my journey of using my wits and perseverance.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- review section ends -->
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+    <h3 class="sub-heading"> Wanna publish your works? Join as an author </h3>
+    <h1 class="heading"> free and fast </h1>
+
+    <form action="/subscribe_result" method = "post">
+
+        <div class="inputBox">
+            <div class="input">
+                <span>your name</span>
+                <input type="text" name = "author_name" placeholder="enter your name">
+            </div>
+            <div class="input">
+                <span>Your image url</span>
+                <input type="url" name = "author_image" placeholder="Enter your image URL">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>your book image url</span>
+                <input type="url" name = "image_name" placeholder="Enter your book image URL">
+            </div>
+            <div class="input">
+                <span>your interested genre</span>
+                <input type="test" name = "genre" placeholder="eg. fiction, poetry etc">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Book cost</span>
+                <input type="number" name = "book_cost" placeholder="Enter the cost of your book">
+            </div>
+            <div class="input">
+                <span>book title</span>
+                <input type="text" name = "book_title" placeholder="Enter the title of your book">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Book description</span>
+                <textarea name="book_info" placeholder="enter your book description" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="input">
+                <span>any additional information about yourself</span>
+                <textarea name="author_info" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" class="btn">
+
+    </form>
+
+</section>
+
+<!-- order section ends -->
+
+<!-- footer section starts  -->
+
+
+
+<!-- footer section ends -->
+
+<!-- loader part  -->
+<!--
+<div class="loader-container">
+    <img src="image/loader.gif" alt="">
+</div>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
